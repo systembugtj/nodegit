@@ -422,6 +422,11 @@
           "include_dirs": [
             "libgit2/deps/regex"
           ]
+        }],
+        ["OS=='mac'", {
+          "defines": [
+            "fdopen=fdopen"
+          ]
         }]
       ],
       "include_dirs": [

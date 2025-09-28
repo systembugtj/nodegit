@@ -82,6 +82,12 @@
             "libraries": [
               "-liconv",
             ],
+            "include_dirs": [
+              "<!@(node ./utils/getMacSdkPath.js include)"
+            ],
+            "cflags_cc": [
+              "<!@(node ./utils/getMacSdkPath.js isysroot)"
+            ],
             "conditions": [
               ["<(is_electron) == 1", {
                 "include_dirs": [
